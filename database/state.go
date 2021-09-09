@@ -15,6 +15,12 @@ import (
 	"path/filepath"
 )
 
+/*
+  State of the blockchain.
+  - Balances of the accounts
+  - Size of the mempool
+  - where is the database metadata to save
+*/
 type State struct {
 	Balances  map[Account]uint
 	txMempool []Tx
@@ -77,7 +83,7 @@ func (s *State) apply(tx Tx) error {
 	}
 
 	if s.Balances[tx.From] < tx.Value {
-		return fmt.Errorf("Insufficient balance.")
+		return fmt.Errorf("insufficient balance")
 	}
 
 	s.Balances[tx.From] -= tx.Value
