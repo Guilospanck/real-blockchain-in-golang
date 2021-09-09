@@ -1,7 +1,7 @@
 # Real-Blockchain-In-Golang
 
 ## c1_genesis_json
-The blockchain is a database. The token supply, initial user balances and global blockchain settings are defined in a Genesis file.
+The blockchain is an *IMMUTABLE* database. The token supply, initial user balances and global blockchain settings are defined in a Genesis file.
 
 ## c2_db_changes.txt
 The Genesis balances indicate what was the original blockchain state and are never updated afterwards.
@@ -18,3 +18,7 @@ User don't have a choice, and shareholders are in business to make money.
 Blockchain developers aim to develop protocols where applications' entrepreneurs and users synergize in a transparent, auditable 
 relationship. Specifications fo the blockchain system should be well-defined from the beginning and only change if its users
 support it.
+
+## c6_immutable_hash
+The database content is hashed by secure cryptographic hash function. The blockchain participants use the resulted hash
+to reference a specific database state.
