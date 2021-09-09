@@ -9,3 +9,7 @@ The database state changes are called *Transactions (TX)*.
 
 ## c3_state_blockchain_component
 Transactions are old fashion Events representing actions within the system.
+
+## c4_caesar_transfer
+Closed software with centralized access to private data and rules puts only a few people to the position fo power.
+User don't have a choice, and shareholders are in business to make money.
