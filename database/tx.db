@@ -6,3 +6,4 @@
 {"from":"babayaga","to":"caesar","value":1000,"data":""}
 {"from":"babayaga","to":"guilospanck","value":50,"data":""}
 {"from":"guilospanck","to":"guilospanck","value":100,"data":"reward"}
+{"from":"guilospanck","to":"guilospanck","value":100,"data":"reward"}
