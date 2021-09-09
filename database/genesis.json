@@ -1,6 +1,6 @@
 {
   "genesis_time": "2021-09-09T19:40:22.415Z",
-  "chain_id": "the-blockchain-bar-ledger",
+  "chain_id": "the-blockchain-bar-ledger_TBB",
   "balances": {
     "guilospanck": 1000000
   }
