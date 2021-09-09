@@ -1,3 +1,4 @@
+// After each alteration on the cmd files, you must run: go install ./cmd/tbb
 package main
 
 import (
@@ -17,6 +18,7 @@ func main() {
 
 	tbbCmd.AddCommand(versionCmd)
 	tbbCmd.AddCommand(balancesCmd())
+	tbbCmd.AddCommand(txCmd())
 
 	err := tbbCmd.Execute()
 	if err != nil {
