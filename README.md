@@ -13,3 +13,8 @@ Transactions are old fashion Events representing actions within the system.
 ## c4_caesar_transfer
 Closed software with centralized access to private data and rules puts only a few people to the position fo power.
 User don't have a choice, and shareholders are in business to make money.
+
+## c5_broken_trust
+Blockchain developers aim to develop protocols where applications' entrepreneurs and users synergize in a transparent, auditable 
+relationship. Specifications fo the blockchain system should be well-defined from the beginning and only change if its users
+support it.
