@@ -53,7 +53,7 @@ func txAddCmd() *cobra.Command {
 
 			defer state.Close() // close db file when everything is executed.
 
-			error := state.Add(tx)
+			error := state.AddTx(tx)
 			if error != nil {
 				fmt.Fprintln(os.Stderr, err)
 				os.Exit(1)
