@@ -12,7 +12,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
-	"path/filepath"
 	"time"
 )
 
@@ -21,6 +20,7 @@ import (
   - Balances of the accounts
   - Size of the mempool
   - where is the database metadata to save
+  - What is the hash of the last block
 */
 type State struct {
 	Balances  map[Account]uint
@@ -30,13 +30,13 @@ type State struct {
 	latestBlockHash Hash
 }
 
-func NewStateFromDisk() (*State, error) {
-	cwd, err := os.Getwd()
+func NewStateFromDisk(dataDir string) (*State, error) {
+	err := initDataDirIfNotExists(dataDir)
 	if err != nil {
 		return nil, err
 	}
 
-	genFilePath := filepath.Join(cwd, "database", "genesis.json")
+	genFilePath := getGenesisJsonFilePath(dataDir)
 	gen, err := loadGenesis(genFilePath)
 	if err != nil {
 		return nil, err
@@ -47,7 +47,7 @@ func NewStateFromDisk() (*State, error) {
 		balances[account] = balance
 	}
 
-	blockDbFilePath := filepath.Join(cwd, "database", "block.db")
+	blockDbFilePath := getBlocksDbFilePath(dataDir)
 	f, err := os.OpenFile(blockDbFilePath, os.O_APPEND|os.O_RDWR, 0600)
 	if err != nil {
 		return nil, err
